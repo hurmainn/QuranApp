@@ -12,18 +12,18 @@ import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
-public class SurahListAdapter extends ArrayAdapter<tsurah> {
+public class SurahAdapter extends ArrayAdapter<tayah> {
 
-    public SurahListAdapter(@NonNull Context context, ArrayList<tsurah> surah) {
-        super(context, 0, surah);
+    public SurahAdapter(@NonNull Context context, ArrayList<tayah> ayah) {
+        super(context, 0, ayah);
     }
 
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent){
-        tsurah surahNames=getItem(position);
-        convertView = LayoutInflater.from(getContext()).inflate(R.layout.surahlist_customizedview, parent, false);
-        TextView surahName= convertView.findViewById(R.id.surahName);
-        surahName.setText(surahNames.getSurahNameE());
+        tayah ayah=getItem(position);
+        convertView = LayoutInflater.from(getContext()).inflate(R.layout.surah_customizedview, parent, false);
+        TextView ayat= convertView.findViewById(R.id.ayah);
+        ayat.setText(ayah.getArabicText());
         return convertView;
     }
 }
