@@ -169,6 +169,7 @@ public class DBhelper extends SQLiteOpenHelper{
         data.close();
         return  surah;
     }
+
     //get all surah
     //get all parah
     //all surah name
